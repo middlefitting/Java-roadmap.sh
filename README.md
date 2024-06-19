@@ -7,3 +7,4 @@
 
 ### Getting Deeper
 - [How JVM works?](src/main/java/com/example/practice/gettingdeeper/howjvmworks/README.md)
+- [Garbage Collection](src/main/java/com/example/practice/gettingdeeper/garbagecollection/README.md)
