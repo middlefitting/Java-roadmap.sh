@@ -3,7 +3,8 @@
 - https://roadmap.sh/java
 
 ## 📖 Index
-### Lean the Fundamentals
+### Learn the Fundamentals
+- [Basic Syntax](src/main/java/com/example/practice/learnthefundamentals/basicsyntax/README.md)
 
 ### Getting Deeper
 - [How JVM works?](src/main/java/com/example/practice/gettingdeeper/howjvmworks/README.md)
