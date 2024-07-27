@@ -5,6 +5,7 @@
 ## 📖 Index
 ### Learn the Fundamentals
 - [Basic Syntax](src/main/java/com/example/practice/learnthefundamentals/basicsyntax/README.md)
+- [Data Types and Variables](src/main/java/com/example/practice/learnthefundamentals/datatypesandvariables/README.md)
 
 ### Getting Deeper
 - [How JVM works?](src/main/java/com/example/practice/gettingdeeper/howjvmworks/README.md)
