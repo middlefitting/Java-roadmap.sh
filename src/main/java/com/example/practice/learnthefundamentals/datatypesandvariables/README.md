@@ -71,3 +71,35 @@ class Main {
 참조 데이터 타입은 원시 데이터 타입을 제외한 모든 친구들입니다. 원시 데이터 타입은 데이터 그 자체를 포함하는 것이고, 참조 데이터 타입은 데이터가 존재하는 주소를 보관하는 것입니다.
 
 대표적으로 String, Array와 같은 친구들이 참조 데이터 타입입니다.
+
+### Enum 데이터 타입
+Enum 데이터 타입은 크게 보면 참조 데이터 타입에 속하지만 좀 특별하게, 사전 정의된 상수들을 간결하고 안정성 높게 사용할 수 있는 데이터 타입입니다.
+
+범주형 데이터를 제공하고자 할 떄 유용하게 사용할 수 있습니다.
+
+이것이 얼마나 편리하고 안정성이 있는지는 아래의 코드를 보면 알 수 있습니다. Enum을 사용했을때와 사용하지 않았을 때에 범주형 값을 제공하는 예시입니다.
+
+- [범주형 값을 제공하는 Enum](HelloEnum.java)
+
+### Record 데이터 타입
+프로그래밍을 하다 보면 불변 데이터 타입을 전달해야 하는 경우가 많이 있습니다. 자바 14부터는 이를 보일러플레이트 코드를 제거하기 위해 Record가 등장하였습니다.
+
+레코드는 아래와 같은 내용을 자동화하기 때문에 필드에 추가에 따른 equals 재정의와 같은 부분을 자동화할 수 있습니다.
+
+- private, final field for each piece of data
+- getter for each field
+- public constructor with a corresponding argument for each field
+- equals method that returns true for objects of the same class when all fields match
+- hashCode method that returns the same value when all fields match
+- toString method that includes the name of the class and the name of each field and its corresponding valu
+
+- [불변 클래스의 자동화, Record](HelloRecord.java)
+
+### Record VS Lombok
+두 솔루션 모두 자동화 측면에서 강점을 기지는데요, 언제 어떤 기술을 사용해야 하는지는 의도에 따라 정해집니다.
+
+Record는 불변 데이터 전달 매개체가 필요할 경우 사용합니다. 하지만 필드를 캡슐화하고, 그것을 제어할 메서드를 노출하고 싶을 경우 Lombok을 사용하는 것이 맞습니다.
+
+또한, 필드가 지나치게 많아질경우, 생성자만 제공하는 Record는 가독성이 떨어지기 때문에, 빌더 패턴을 제공할 수 있는 Lombok을 선택하는 것이 적절합니다.
+
+마지막으로 Record는 상속을 지원하지 않습니다. 상속이 필요할 경우에는 Lombok을 사용하는 것이 적절합니다.
